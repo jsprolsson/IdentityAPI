@@ -1,0 +1,14 @@
+﻿@page
+@model Identity_API.UI.Pages.LogOutModel
+@{
+}
+
+<div class="container justify-content-center">
+    <h2 class="display-4">Are you sure you want to log out?</h2>
+</div>
+<form method="post" asp-page-handler="LogOut">
+    <input type="submit" class="btn btn-outline-dark" value="Yes" />
+</form>
+<form method="post" asp-page-handler="DontLogOut">
+    <input type="submit" class="btn-primary" value="No" />
+</form>
