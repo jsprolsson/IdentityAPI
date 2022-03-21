@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Identity_API.API",
+    "\\Identity_API.API\\Controllers",
+    "\\Identity_API.UI",
+    "\\Identity_API.UI\\Pages"
+  ],
+  "SelectedNode": "\\Identity_API.UI\\Pages\\ShowListOfWeapons.cshtml.cs",
+  "PreviewInSolutionExplorer": false
+}

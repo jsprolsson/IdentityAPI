@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kUcBBoEN5wC75AjBTXuGmIXEnmNIzf+ECejgCgvuz+NAnaIxvPgh6IEWxjCs914bVtSlWzM0cqcs/jlGjGH8HA==",
+  "dgSpecHash": "p9iCmkNneuw/wCEsQCnvEGDUoW/jBPf8pRRHxh+GOb8TxFdBkW8q+hG1Vs/On9e4mEd2PnIIsNI1NvUmmbqC/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jespe\\source\\OOP2\\Identity_API\\Identity_API.API\\Identity_API.API.csproj",
+  "projectFilePath": "C:\\Users\\jespe\\source\\OOP2\\IdentityAPI\\Identity_API.API\\Identity_API.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jespe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jespe\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

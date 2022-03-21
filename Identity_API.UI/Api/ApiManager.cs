@@ -1,6 +1,7 @@
 ﻿using Identity_API.DAL.Entities;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Identity_API.UI.Api
 {
@@ -34,6 +35,20 @@ namespace Identity_API.UI.Api
                     }
                     else return null;
                 }
+            }
+        }
+
+        public async Task<string> PostWeaponToDb(EldenRingWeapon weapon)
+        {
+            var currentUser = await _signInManager.UserManager.GetUserAsync(_httpContextAccessor.HttpContext.User);
+            string url = String.Concat(baseUrl, $"?accessToken={currentUser.AccessToken}");
+
+            using (var httpClient = new HttpClient())
+            {
+                var newPostJson = JsonConvert.SerializeObject(weapon);
+                var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
+                var result = httpClient.PostAsync(url, payload).Result.Content.ReadAsStringAsync().Result;
+                return result;
             }
         }
     }

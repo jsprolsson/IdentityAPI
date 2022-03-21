@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity_API.API", "Identity_API.API\Identity_API.API.csproj", "{2105189A-6695-4E8C-80B9-82110F068D11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity_API.API", "Identity_API.API\Identity_API.API.csproj", "{2105189A-6695-4E8C-80B9-82110F068D11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity_API.DAL", "Identity_API.DAL\Identity_API.DAL.csproj", "{B26931DE-3540-478F-9367-5B3F6B26A5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity_API.DAL", "Identity_API.DAL\Identity_API.DAL.csproj", "{B26931DE-3540-478F-9367-5B3F6B26A5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity_API.UI", "Identity_API.UI\Identity_API.UI.csproj", "{ED2C50BD-5D11-45BB-A313-AF45AB1420DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity_API.UI", "Identity_API.UI\Identity_API.UI.csproj", "{ED2C50BD-5D11-45BB-A313-AF45AB1420DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,13 @@
+﻿@page
+@model Identity_API.UI.Pages.AddWeaponModel
+@{
+}
+
+<form method="post">
+    <input type="text" asp-for="@Model.Weapon.Name" placeholder="Name...." />
+    <input type="text" asp-for="@Model.Weapon.WeaponType" placeholder="Weapon type...." />
+    <input type="text" asp-for="@Model.Weapon.SkillBestScaledWith" placeholder="Skill best scaled with..." />
+    <input type="text" asp-for="@Model.Weapon.ImageURL" placeholder="Image...." />
+    <input type="number" asp-for="@Model.Weapon.Damage" placeholder="Damage...." />
+    <button type="submit">Add weapon!</button>
+</form>

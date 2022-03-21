@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Identity_API.DAL.Migrations.EldenRingWeapons
 {
     [DbContext(typeof(EldenRingWeaponsContext))]
-    [Migration("20220320225835_MadeImageUrlNullable")]
-    partial class MadeImageUrlNullable
+    [Migration("20220321092030_newEldenRingWeapons")]
+    partial class newEldenRingWeapons
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

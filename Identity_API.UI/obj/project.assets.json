@@ -2698,11 +2698,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jespe\\source\\OOP2\\Identity_API\\Identity_API.UI\\Identity_API.UI.csproj",
+      "projectUniqueName": "C:\\Users\\jespe\\source\\OOP2\\IdentityAPI\\Identity_API.UI\\Identity_API.UI.csproj",
       "projectName": "Identity_API.UI",
-      "projectPath": "C:\\Users\\jespe\\source\\OOP2\\Identity_API\\Identity_API.UI\\Identity_API.UI.csproj",
+      "projectPath": "C:\\Users\\jespe\\source\\OOP2\\IdentityAPI\\Identity_API.UI\\Identity_API.UI.csproj",
       "packagesPath": "C:\\Users\\jespe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jespe\\source\\OOP2\\Identity_API\\Identity_API.UI\\obj\\",
+      "outputPath": "C:\\Users\\jespe\\source\\OOP2\\IdentityAPI\\Identity_API.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jespe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2719,8 +2719,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jespe\\source\\OOP2\\Identity_API\\Identity_API.DAL\\Identity_API.DAL.csproj": {
-              "projectPath": "C:\\Users\\jespe\\source\\OOP2\\Identity_API\\Identity_API.DAL\\Identity_API.DAL.csproj"
+            "C:\\Users\\jespe\\source\\OOP2\\IdentityAPI\\Identity_API.DAL\\Identity_API.DAL.csproj": {
+              "projectPath": "C:\\Users\\jespe\\source\\OOP2\\IdentityAPI\\Identity_API.DAL\\Identity_API.DAL.csproj"
             }
           }
         }
@@ -2764,7 +2764,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

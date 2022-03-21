@@ -12,3 +12,17 @@ C:\Users\jespe\source\OOP2\Identity_API\Identity_API.DAL\obj\Debug\net6.0\refint
 C:\Users\jespe\source\OOP2\Identity_API\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.pdb
 C:\Users\jespe\source\OOP2\Identity_API\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.genruntimeconfig.cache
 C:\Users\jespe\source\OOP2\Identity_API\Identity_API.DAL\obj\Debug\net6.0\ref\Identity_API.DAL.dll
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\bin\Debug\net6.0\Identity_API.DAL.deps.json
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\bin\Debug\net6.0\Identity_API.DAL.runtimeconfig.json
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\bin\Debug\net6.0\Identity_API.DAL.dll
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\bin\Debug\net6.0\Identity_API.DAL.pdb
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.csproj.AssemblyReference.cache
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.AssemblyInfoInputs.cache
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.AssemblyInfo.cs
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.csproj.CoreCompileInputs.cache
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.dll
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\refint\Identity_API.DAL.dll
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.pdb
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\Identity_API.DAL.genruntimeconfig.cache
+C:\Users\jespe\source\OOP2\IdentityAPI\Identity_API.DAL\obj\Debug\net6.0\ref\Identity_API.DAL.dll

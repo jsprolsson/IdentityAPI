@@ -30,5 +30,69 @@ namespace Identity_API.API.Controllers
             }
             return _dbManager.GetWeapons();
         }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EldenRingWeapon))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(string))]
+        public async Task<ActionResult<EldenRingWeapon>> GetWeapons(int id, string accessToken)
+        {
+            bool accessTokenFound = _dbManager.GetCurrentUserAccessToken(accessToken);
+
+            if (accessTokenFound is false)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+
+            return _dbManager.GetWeapon(id);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(string))]
+        public async Task<IActionResult> PostWeapon(EldenRingWeapon weapon, string accessToken)
+        {
+            bool accessTokenFound = _dbManager.GetCurrentUserAccessToken(accessToken);
+
+            if (accessTokenFound is false)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+
+            await _dbManager.PostWeapon(weapon);
+            return Ok("Weapon added");
+        }
+
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(string))]
+        public async Task<IActionResult> UpdateWeapon(EldenRingWeapon weapon, string accessToken)
+        {
+            bool accessTokenFound = _dbManager.GetCurrentUserAccessToken(accessToken);
+
+            if (accessTokenFound is false)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+
+            await _dbManager.UpdateWeapon(weapon);
+            return Ok("Weapon updated");
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(string))]
+        public async Task<IActionResult> DeleteWeapon(int id, string accessToken)
+        {
+            bool accessTokenFound = _dbManager.GetCurrentUserAccessToken(accessToken);
+
+            if (accessTokenFound is false)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+
+            await _dbManager.DeleteWeapon(id);
+            return Ok("Weapon deleted");
+        }
+
     }
 }

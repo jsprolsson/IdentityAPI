@@ -4,7 +4,7 @@
 
 namespace Identity_API.DAL.Migrations.EldenRingWeapons
 {
-    public partial class AddedEldenRingDb : Migration
+    public partial class newEldenRingWeapons : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,7 @@ namespace Identity_API.DAL.Migrations.EldenRingWeapons
                     WeaponType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SkillBestScaledWith = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Damage = table.Column<int>(type: "int", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
