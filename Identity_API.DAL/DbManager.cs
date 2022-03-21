@@ -1,5 +1,6 @@
 ﻿using Identity_API.DAL.Entities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Identity_API.DAL
         {
             _context = context;
             _userDatabase = userDatabase;
-            _weapons = _context.EldenRingWeapons.ToList();
+            _weapons = _context.EldenRingWeapons.AsNoTracking().ToList();
         }
 
         public bool GetCurrentUserAccessToken(string accessToken)
