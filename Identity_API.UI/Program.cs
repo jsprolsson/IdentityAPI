@@ -24,6 +24,15 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequireUppercase = false;
 });
 
+//Redirects user to login-page if user not logged in trying to access authorized folders.
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login";
+});
+
+//To access pages within member-folder, need to be authorized.
+builder.Services.AddRazorPages(options => options.Conventions.AuthorizeFolder("/Member"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

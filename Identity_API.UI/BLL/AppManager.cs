@@ -6,6 +6,9 @@ namespace Identity_API.UI.BLL
     {
         public static string CreateAccessToken()
         {
+
+            //Generates a random string with 20 different characters in both upper and lowercase.
+
             StringBuilder strBuilder = new();
             Random random = new();
 

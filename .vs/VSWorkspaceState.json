@@ -3,9 +3,11 @@
     "",
     "\\Identity_API.API",
     "\\Identity_API.API\\Controllers",
+    "\\Identity_API.DAL",
     "\\Identity_API.UI",
+    "\\Identity_API.UI\\Api",
     "\\Identity_API.UI\\Pages"
   ],
-  "SelectedNode": "\\Identity_API.UI\\Pages\\ShowListOfWeapons.cshtml.cs",
+  "SelectedNode": "\\Identity_API.UI\\Api\\ApiManager.cs",
   "PreviewInSolutionExplorer": false
 }

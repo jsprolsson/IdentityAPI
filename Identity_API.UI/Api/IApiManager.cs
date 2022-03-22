@@ -6,5 +6,6 @@ namespace Identity_API.UI.Api
     {
         Task<List<EldenRingWeapon>> GetWeaponsFromDb();
         Task<string> PostWeaponToDb(EldenRingWeapon weapon);
+        Task<string> DeleteWeaponFromDb(int id);
     }
 }

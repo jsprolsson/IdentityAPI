@@ -1,0 +1,9 @@
+﻿@page
+@model Identity_API.UI.Pages.Member.DeleteWeaponModel
+@{
+}
+
+<form method="post">
+    <input type="number" asp-for="@Model.IDToDelete" placeholder ="Id for weapon to delete"/>
+    <input type="submit" class="btn btn-outline-dark" value="Delete!"/>
+</form>

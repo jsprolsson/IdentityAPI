@@ -17,8 +17,32 @@ namespace Identity_API.UI.Api
             _httpContextAccessor = httpContextAccessor;
         }
 
+        public async Task<string> DeleteWeaponFromDb(int id)
+        {
+            var currentUser = await _signInManager.UserManager.GetUserAsync(_httpContextAccessor.HttpContext.User);
+            string url = String.Concat(baseUrl, $"/{id}?accessToken={currentUser.AccessToken}");
+
+            using (var client = new HttpClient())
+            {
+                using(var response = await client.DeleteAsync(url))
+                {
+                    if(response.IsSuccessStatusCode)
+                    {
+                        var apiResponse = await response.Content.ReadAsStringAsync();
+                        return apiResponse;
+                    }
+                    else return null;
+                }
+            }
+        }
+
         public async Task<List<EldenRingWeapon>> GetWeaponsFromDb()
         {
+
+            //Api-call to web api to get a list of weapons from the database.
+            //Send a access token for verification that user exists in AuthdB.
+            //HttpContextAccessor is injected in to get current user logged in's access token...I think.
+
             List<EldenRingWeapon> weapons = new();
             var currentUser = await _signInManager.UserManager.GetUserAsync(_httpContextAccessor.HttpContext.User);
             string url = String.Concat(baseUrl, $"?accessToken={currentUser.AccessToken}");

@@ -19,11 +19,17 @@ namespace Identity_API.DAL
         {
             _context = context;
             _userDatabase = userDatabase;
+
+            //Bad practice I guess to have list here. Attempt to avoid repeating myself in methods.
+            //AsNoTracking() to be able to save changes to database without database being confused what to save.
             _weapons = _context.EldenRingWeapons.AsNoTracking().ToList();
         }
 
         public bool GetCurrentUserAccessToken(string accessToken)
         {
+            //Searches through entire user database for accessToken passed in.
+            //Returns true if access token found.
+
             List<ApplicationUser> users = _userDatabase.Users.ToList();
             bool accessTokenLegit = false;
 

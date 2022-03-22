@@ -78,7 +78,7 @@ namespace Identity_API.API.Controllers
             return Ok("Weapon updated");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(string))]
         public async Task<IActionResult> DeleteWeapon(int id, string accessToken)
@@ -87,7 +87,8 @@ namespace Identity_API.API.Controllers
 
             if (accessTokenFound is false)
             {
-                return StatusCode(StatusCodes.Status403Forbidden);
+                //Sends status code 403 and returns string in response body.
+                return StatusCode(StatusCodes.Status403Forbidden, "Forbidden");
             }
 
             await _dbManager.DeleteWeapon(id);
