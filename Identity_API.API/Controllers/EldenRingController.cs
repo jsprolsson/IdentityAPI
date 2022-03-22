@@ -22,11 +22,15 @@ namespace Identity_API.API.Controllers
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<ActionResult<List<EldenRingWeapon>>> GetWeapons(string accessToken)
         {
+            //web api receives http method with access token in query string.
+            //GetCurrentUserAccessToken method in dbmanager searches through authdb if the token exists.
+            //Sort of works because access token is given only to the user logged in and removed when logged out.
+            //Would be nice to check that the right user has the right token. More specific.
             bool accessTokenFound = _dbManager.GetCurrentUserAccessToken(accessToken);
 
             if (accessTokenFound is false)
             {
-                return StatusCode(StatusCodes.Status403Forbidden);
+                return StatusCode(StatusCodes.Status403Forbidden, "Forbidden");
             }
             return _dbManager.GetWeapons();
         }
@@ -40,7 +44,7 @@ namespace Identity_API.API.Controllers
 
             if (accessTokenFound is false)
             {
-                return StatusCode(StatusCodes.Status403Forbidden);
+                return StatusCode(StatusCodes.Status403Forbidden, "Forbidden");
             }
 
             return _dbManager.GetWeapon(id);
@@ -55,7 +59,7 @@ namespace Identity_API.API.Controllers
 
             if (accessTokenFound is false)
             {
-                return StatusCode(StatusCodes.Status403Forbidden);
+                return StatusCode(StatusCodes.Status403Forbidden, "Forbidden");
             }
 
             await _dbManager.PostWeapon(weapon);
@@ -71,7 +75,7 @@ namespace Identity_API.API.Controllers
 
             if (accessTokenFound is false)
             {
-                return StatusCode(StatusCodes.Status403Forbidden);
+                return StatusCode(StatusCodes.Status403Forbidden, "Forbidden");
             }
 
             await _dbManager.UpdateWeapon(weapon);

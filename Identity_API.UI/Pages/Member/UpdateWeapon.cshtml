@@ -1,0 +1,45 @@
+﻿@page
+@model Identity_API.UI.Pages.Member.UpdateWeaponModel
+@{
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Weapon Name</th>
+      <th scope="col">Weapon Type</th>
+      <th scope="col">Skills best scaled with</th>
+      <th scope="col">Damage</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+            @foreach(var weapon in Model.WeaponList)
+            {
+        <tr>
+       <th scope="row">@weapon.Id</th>
+      <td>@weapon.Name</td>
+      <td>@weapon.WeaponType</td>
+      <td>@weapon.SkillBestScaledWith</td>
+      <td>@weapon.Damage</td>
+        </tr>
+            }
+            
+    
+  </tbody>
+</table>
+
+<h1 class="display-4">Update weapon</h1>
+
+<form method="post" asp-page-handler="Update">
+
+    <input type="number" placeholder="Weapon to update" asp-for="EldenRingWeapon.Id" />
+    <input type="text" placeholder="Weapon name" asp-for="EldenRingWeapon.Name" />
+    <input type="text" placeholder="Weapon type" asp-for="EldenRingWeapon.WeaponType" />
+    <input type="text" placeholder="Skill best scaled with" asp-for="EldenRingWeapon.SkillBestScaledWith" />
+    <input type="text" placeholder="Image URL" asp-for="EldenRingWeapon.ImageURL" />
+    <input type="text" placeholder="Damage" asp-for="EldenRingWeapon.Damage" />
+
+    <input type="submit" class="btn btn-outline-dark" value="Update!"/>
+</form>

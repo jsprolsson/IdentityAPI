@@ -26,6 +26,8 @@ namespace Identity_API.UI.Pages
         {
             if (ModelState.IsValid)
             {
+
+                //Creates user.
                 ApplicationUser user = new();
 
                 user.UserName = RegisterUser.Username;
@@ -33,6 +35,7 @@ namespace Identity_API.UI.Pages
 
                 var result = await _userManager.CreateAsync(user, RegisterUser.Password);
 
+                //If user creation successful, redirects to login page with message.
                 if (result.Succeeded)
                 {
                     return RedirectToPage("/Login", new { Message = "User created! Please login." });

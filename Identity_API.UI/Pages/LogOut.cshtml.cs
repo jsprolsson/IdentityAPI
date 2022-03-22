@@ -28,6 +28,9 @@ namespace Identity_API.UI.Pages
 
         public async Task<IActionResult> OnPostLogOut()
         {
+            //First retrieves current user, then nullifies access token, updates and then sign out.
+            //Represents a sort of cookie with time expiration.
+
             var currentUser = await _signInManager.UserManager.GetUserAsync(User);
             currentUser.AccessToken = null;
             await _signInManager.UserManager.UpdateAsync(currentUser);

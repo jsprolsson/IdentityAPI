@@ -39,7 +39,7 @@ namespace Identity_API.UI.Api
         public async Task<List<EldenRingWeapon>> GetWeaponsFromDb()
         {
 
-            //Api-call to web api to get a list of weapons from the database.
+            //Api-call to web api in same solution to get a list of weapons from the database.
             //Send a access token for verification that user exists in AuthdB.
             //HttpContextAccessor is injected in to get current user logged in's access token...I think.
 
@@ -72,6 +72,20 @@ namespace Identity_API.UI.Api
                 var newPostJson = JsonConvert.SerializeObject(weapon);
                 var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
                 var result = httpClient.PostAsync(url, payload).Result.Content.ReadAsStringAsync().Result;
+                return result;
+            }
+        }
+
+        public async Task<string> UpdateWeaponFromDb(EldenRingWeapon weapon)
+        {
+            var currentUser = await _signInManager.UserManager.GetUserAsync(_httpContextAccessor.HttpContext.User);
+            string url = String.Concat(baseUrl, $"?accessToken={currentUser.AccessToken}");
+
+            using (var httpClient = new HttpClient())
+            {
+                var newPostJson = JsonConvert.SerializeObject(weapon);
+                var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
+                var result = httpClient.PutAsync(url, payload).Result.Content.ReadAsStringAsync().Result;
                 return result;
             }
         }
