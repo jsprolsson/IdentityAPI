@@ -6,6 +6,7 @@ namespace Identity_API.DAL
     {
         Task DeleteWeapon(int id);
         bool GetCurrentUserAccessToken(string accessToken);
+        bool AllowUserAccessToWeapon(EldenRingWeapon weapon);
         EldenRingWeapon GetWeapon(int id);
         List<EldenRingWeapon> GetWeapons();
         Task PostWeapon(EldenRingWeapon weapon);

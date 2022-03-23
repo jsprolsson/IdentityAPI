@@ -14,12 +14,16 @@ namespace Identity_API.DAL
     {
         private readonly EldenRingWeaponsContext _context;
         private readonly AuthDbContext _userDatabase;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly List<EldenRingWeapon> _weapons;
 
-        public DbManager(EldenRingWeaponsContext context, AuthDbContext userDatabase)
+        public DbManager(EldenRingWeaponsContext context, AuthDbContext userDatabase, SignInManager<ApplicationUser> signInManager, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _userDatabase = userDatabase;
+            _signInManager = signInManager;
+            _httpContextAccessor = httpContextAccessor;
 
             //Bad practice I guess to have list here. Attempt to avoid repeating myself in the DbManagers methods.
             //AsNoTracking() to be able to save changes to database without database being confused what to save.
@@ -83,6 +87,18 @@ namespace Identity_API.DAL
 
             _context.EldenRingWeapons.Remove(eldenRingWeapon);
             await _context.SaveChangesAsync();
+        }
+
+        public bool AllowUserAccessToWeapon(EldenRingWeapon weapon)
+        {
+            bool correctUser = false;
+            //Check the weapon that is passed in and compare that to the weapon that is already in the database.
+            //If the weaponownerid is the same, update the weapon.
+            var weaponInDatabase = _weapons.Find(w => w.Id == weapon.Id);
+
+            correctUser = weaponInDatabase.WeaponOwnerId == weapon.WeaponOwnerId ? true : false;
+
+            return correctUser;
         }
     }
 }

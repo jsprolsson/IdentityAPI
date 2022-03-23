@@ -6,8 +6,9 @@
     "\\Identity_API.DAL",
     "\\Identity_API.UI",
     "\\Identity_API.UI\\Api",
-    "\\Identity_API.UI\\Pages"
+    "\\Identity_API.UI\\Pages",
+    "\\Identity_API.UI\\Pages\\Member"
   ],
-  "SelectedNode": "\\Identity_API.sln",
+  "SelectedNode": "\\Identity_API.UI\\Pages\\Member\\AddWeapon.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }
