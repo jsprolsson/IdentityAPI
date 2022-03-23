@@ -3,6 +3,7 @@ using Identity_API.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Identity_API.DAL.Migrations.EldenRingWeapons
 {
     [DbContext(typeof(EldenRingWeaponsContext))]
-    partial class EldenRingWeaponsContextModelSnapshot : ModelSnapshot
+    [Migration("20220323111021_addedWeaponOwnerIdToWeaponEntity")]
+    partial class addedWeaponOwnerIdToWeaponEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

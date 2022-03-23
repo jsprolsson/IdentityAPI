@@ -41,7 +41,7 @@ namespace Identity_API.UI.Api
 
             //Api-call to web api in same solution to get a list of weapons from the database.
             //Send a access token for verification that user exists in AuthdB.
-            //HttpContextAccessor is injected in to get current user logged in's access token...I think.
+            //HttpContextAccessor is injected in to get current user logged in's access token.
 
             List<EldenRingWeapon> weapons = new();
             var currentUser = await _signInManager.UserManager.GetUserAsync(_httpContextAccessor.HttpContext.User);

@@ -11,5 +11,6 @@ namespace Identity_API.DAL.Entities
         public string? SkillBestScaledWith { get; set; }
         public int Damage { get; set; }
         public string? ImageURL { get; set; }
+        public string? WeaponOwnerId { get; set; }
     }
 }

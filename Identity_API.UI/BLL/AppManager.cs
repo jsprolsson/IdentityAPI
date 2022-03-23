@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Identity_API.DAL.Entities;
+using Microsoft.AspNetCore.Identity;
+using System.Text;
 
 namespace Identity_API.UI.BLL
 {
@@ -37,5 +39,6 @@ namespace Identity_API.UI.BLL
             }
             return accessToken = strBuilder.ToString();
         }
+
     }
 }

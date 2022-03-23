@@ -1,4 +1,5 @@
 ﻿using Identity_API.DAL.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -20,7 +21,7 @@ namespace Identity_API.DAL
             _context = context;
             _userDatabase = userDatabase;
 
-            //Bad practice I guess to have list here. Attempt to avoid repeating myself in methods.
+            //Bad practice I guess to have list here. Attempt to avoid repeating myself in the DbManagers methods.
             //AsNoTracking() to be able to save changes to database without database being confused what to save.
             _weapons = _context.EldenRingWeapons.AsNoTracking().ToList();
         }

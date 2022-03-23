@@ -14,5 +14,7 @@ namespace Identity_API.DAL.Entities
         public string? LastName { get; set; }
         public DateTime DateRegistered { get; set; }
         public DateTime LastLoggedIn { get; set; }
+
+
     }
 }
