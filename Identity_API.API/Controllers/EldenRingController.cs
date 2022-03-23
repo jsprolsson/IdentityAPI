@@ -71,16 +71,9 @@ namespace Identity_API.API.Controllers
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(string))]
         public async Task<IActionResult> UpdateWeapon(EldenRingWeapon weapon, string accessToken)
         {
-            bool isUserAllowed = false;
-
             bool accessTokenFound = _dbManager.GetCurrentUserAccessToken(accessToken);
-
+            bool isUserAllowed = _dbManager.AllowUserAccessToWeapon(weapon);
             
-            if(accessTokenFound)
-            {
-                isUserAllowed = _dbManager.AllowUserAccessToWeapon(weapon);
-            }
-
             
             if (accessTokenFound is false || !isUserAllowed)
             {

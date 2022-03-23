@@ -29,6 +29,7 @@ namespace Identity_API.UI.Pages.Member
         {
             var currentUser = await _signInManager.UserManager.GetUserAsync(User);
             EldenRingWeapon.WeaponOwnerId = currentUser.Id;
+
             var msg = await _apiManager.UpdateWeaponFromDb(EldenRingWeapon);
             if (!String.IsNullOrEmpty(msg))
             {
